@@ -10,18 +10,20 @@ const carousel = ({slides}) => {
 
   return (
     <div className="overflow-hidden relative">
-      <div className='flex flex-1 items-center'>
+      <div className="flex flex-1 items-center transition-transform ease-out duration-500"
+        style={{ transform: `translateX(-${curr * 100}%)`}}>
+          
         {slides.map((slide)=>(
           <img src={slide} alt="img" />
         ))}
 
         <div className="absolute w-full flex flex-1 justify-between p-4">
 
-          <button className='p-1 rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white'>
+          <button onClick={prev} className='p-1 rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white'>
           <ChevronLeft size={40}/>
           </button>
 
-          <button className='p-1 rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white'>
+          <button onClick={next} className='p-1 rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white'>
             <ChevronRight size={40}/>
           </button>
           
