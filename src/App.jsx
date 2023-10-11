@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from './components/Carousel';
+import Carousel from './components/Carousel'
 
 const slides = [
   "https://i.ibb.co/ncrXc2V/1.png",
@@ -14,7 +14,14 @@ const App = () => {
   return (
     <main className="relative">
       <div className="max-w-lg justify-center">
-        <Carousel slides={slides}/>
+        <Carousel>
+          {
+            slides.map((slide)=>(
+              <img src={slide}/>
+            ))
+
+          }
+        </Carousel>
       </div>
     </main>
   )
