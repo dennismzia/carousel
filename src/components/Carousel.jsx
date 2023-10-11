@@ -2,6 +2,12 @@ import React,{useEffect, useState} from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
 const carousel = ({slides}) => {
+  const [curr, setcurr] = useState(0)
+
+  const prev = () => setcurr(curr => curr === 0 ? slides.lenght -1 : curr -1)
+
+  const next = () => setcurr((curr)=>curr === slides.lenght -1 ? 0 : curr + 1)
+
   return (
     <div className="overflow-hidden relative">
       <div className='flex flex-1 items-center'>
