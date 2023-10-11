@@ -24,7 +24,7 @@ const App = () => {
       ];
   return (
     <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-16 relative">
-        <div style={{background: `url()`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500">
+        <div style={{background: `url(${slides[0].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500">
 
         </div>
         
